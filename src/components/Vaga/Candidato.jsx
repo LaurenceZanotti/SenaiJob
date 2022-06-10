@@ -12,7 +12,7 @@ function Candidato(props) {
 
     return (
         <>
-        <div className="candidato_container" onClick={handleShow}>
+        <div className="candidato_container" onClick={handleShow} role="button">
             <h3>{ nome_candidato }</h3>
             <p>{idade} anos. Mora em {cidade}.</p>
             <h4>Último curso</h4>

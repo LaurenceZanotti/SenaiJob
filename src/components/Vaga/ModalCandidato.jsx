@@ -30,13 +30,12 @@ function ModalCandidato(props) {
                 </Modal.Body>
                 <Modal.Body>
                     <h4>Contatos</h4>
-                    
-                    <img src="" alt="Instagram logo"/> Abrir Instagram
-                    <img src="" alt="Linkedin logo"/> Abrir Linkedin
+                    <div>{candidato.contatos[0]}</div>
+                    <div>{candidato.contatos[1]}</div>
+                    <div>{candidato.contatos[2]}</div>
+                    <div><img src="" alt="Instagram logo"/> Abrir Instagram</div>
+                    <div><img src="" alt="Linkedin logo"/> Abrir Linkedin</div>
                 </Modal.Body>
-
-                <Modal.Footer>                
-                </Modal.Footer>
             </Modal>
         </div>
     )
