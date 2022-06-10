@@ -4,10 +4,14 @@ import house from '../../assets/icons/house.png'
 import user from '../../assets/icons/user.png'
 import menu from '../../assets/icons/menu.svg'
 import './Menu.css'
+import {MenuContext} from '../App'
+
 
 function Menu() {
     const [show, setShow] = useState('hide-menu')
-    
+    const menuContext = useContext(MenuContext)
+
+    if (menuContext.menu)
     return (
         <div className="menu_container hide-menu">
             <div role="button">
