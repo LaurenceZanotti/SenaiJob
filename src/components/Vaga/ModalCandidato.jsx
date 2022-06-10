@@ -16,13 +16,26 @@ function ModalCandidato(props) {
                     <div>{candidato.idade} anos - {candidato.sexo} - {candidato.cidade}</div>
                     { candidato.isEmpregado && <div className="text-primary">Candidato empregado, porém aceitando propostas</div> }
                 </Modal.Body>
-                <Modal.Footer>
-                <Button variant="secondary" onClick={props.handleClose}>
+                <Modal.Body>
+                    <h4>Cursos</h4>
+                    <ul>
+                        {candidato.cursos_senai.map((curso, index) => {
+                            return <li key={index}>{curso}</li>
+                        })}
+                    </ul>
+                </Modal.Body>
+                <Modal.Body>
+                    <h4>Currículo</h4>
+                    <a role="button">Acessar currículo</a>
+                </Modal.Body>
+                <Modal.Body>
+                    <h4>Contatos</h4>
                     
-                </Button>
-                <Button variant="primary" onClick={props.handleClose}>
-                    Save Changes
-                </Button>
+                    <img src="" alt="Instagram logo"/> Abrir Instagram
+                    <img src="" alt="Linkedin logo"/> Abrir Linkedin
+                </Modal.Body>
+
+                <Modal.Footer>                
                 </Modal.Footer>
             </Modal>
         </div>

@@ -1,0 +1,27 @@
+.logo {
+    width: 100%;
+}
+
+.job {
+    float: right
+}
+
+.menu_container {
+    position: absolute;
+    left: 0;
+    background-color: #d10e00;
+    width: 15em;
+    height: 100vh;
+    color: white;
+    padding: 2em 1em;
+    box-sizing: border-box;
+}
+
+.show-menu {
+    display: block;
+   
+}
+
+.hide-menu {
+    display: none
+}

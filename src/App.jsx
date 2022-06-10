@@ -1,7 +1,7 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import Pagina from './components/Pagina'
-import Menu from './components/Menu'
+import Menu from './components/Menu/Menu'
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <main>
         <Menu />
-        <Pagina />        
+        <Pagina />
       </main>
     </div>
   )
