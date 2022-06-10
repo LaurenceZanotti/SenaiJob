@@ -1,13 +1,11 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-
+import menu from '../assets/icons/menu.svg'
 
 function Navbar() {
     return (
-        <nav>
-            <FontAwesomeIcon icon="fa-solid fa-bars" />
-            <a href="">Sair</a>
+        <nav className="d-flex justify-content-between w-100 bg-secondary text-white">
+            <img src={menu} alt="Botão de menu" className="ms-2 mt-1 mb-1"/>
+            <div className="me-2 mt-1 mb-1 pe-auto  " role="button">Sair</div>
         </nav>            
     )
 }
