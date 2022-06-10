@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ModalCandidato from './ModalCandidato'
+
 
 function Candidato(props) {
-    const { nome_candidato, idade, cidade, ultimo_curso } = props
+    const { id, nome_candidato, idade, cidade, ultimo_curso } = props
 
-    function handleClick() {
-        console.log('aberto', props)
-    }
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
-        <div className="candidato_container" onClick={handleClick}>
+        <>
+        <div className="candidato_container" onClick={handleShow}>
             <h3>{ nome_candidato }</h3>
             <p>{idade} anos. Mora em {cidade}.</p>
             <h4>Último curso</h4>
@@ -17,8 +21,13 @@ function Candidato(props) {
             <div>
                 <p><img src="" alt="Ícone detalhes"/>Detalhes</p>
                 <p><img src="" alt="Ícone contratei"/>Contratei</p>
-            </div>
+            </div>            
+
+            
         </div>
+        <ModalCandidato show={show} handleClose={handleClose} indice_candidato={id} />
+        </>
+        
     )
 }
 

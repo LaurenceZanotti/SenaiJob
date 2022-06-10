@@ -1,20 +1,21 @@
 import React from 'react'
 import Candidato from './Candidato'
+import candidatos from '../../fake_api/candidatos'
 
-const candidatos = [
-    {
-        nome_candidato: "Ana da Silva",
-        idade: 33, 
-        cidade: "Santana de Parnaíba", 
-        ultimo_curso: "Tecnologia da Informação - Excel Completo - 2022"
-    },
-    {
-        nome_candidato: "João Augusto Nogueira",
-        idade: 28, 
-        cidade: "Santana de Parnaíba", 
-        ultimo_curso: "Tecnologia da Informação - Informática Básica - 2019"
-    }
-]
+// const candidatos = [
+//     {
+//         nome_candidato: "Ana da Silva",
+//         idade: 33, 
+//         cidade: "Santana de Parnaíba", 
+//         ultimo_curso: "Tecnologia da Informação - Excel Completo - 2022"
+//     },
+//     {
+//         nome_candidato: "João Augusto Nogueira",
+//         idade: 28, 
+//         cidade: "Santana de Parnaíba", 
+//         ultimo_curso: "Tecnologia da Informação - Informática Básica - 2019"
+//     }
+// ]
 
 function Candidatos() {
     return (
@@ -30,6 +31,7 @@ function Candidatos() {
                 <h2>Vistos:</h2>
                 {candidatos.map((candidato, index) => <Candidato 
                     key={index}
+                    id={index}
                     nome_candidato={candidato.nome_candidato}
                     idade={candidato.idade}
                     cidade={candidato.cidade}
